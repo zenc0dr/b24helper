@@ -1,5 +1,3 @@
-let ids = []
-let interval = 0
 let trashPhrases = [
     'Крайний срок:',
     'ваша эффективность будет снижена.',
@@ -7,6 +5,8 @@ let trashPhrases = [
 ]
 
 $(document).on('click', '.bx-im-notifications-header-image', () => {
+    let ids = []
+    let interval = 0
     console.log('kill tasks')
     $('.bx-im-notifications-item').each((index, item) => {
         let $item = $(item)
