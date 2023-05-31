@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "B24 Helper",
+    "version": "1.0.1",
+    "action": {
+        "default_icon": "b24.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://nopreset.bitrix24.ru/*"],
+            "js": ["jquery-3.6.0.min.js", "core.js"],
+            "css": ["styles.css"]
+        }
+    ],
+    "permissions": [
+        "notifications"
+    ],
+    "host_permissions": [
+        "https://nopreset.bitrix24.ru/*"
+    ]
+}
