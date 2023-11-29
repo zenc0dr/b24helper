@@ -1,7 +1,7 @@
-.bx-messenger-panel-avatar.bx-im-notifications-image-system.bx-im-notifications-header-image {
+.bx-im-content-notification__container .bx-im-content-notification__panel-title_icon {
     cursor: pointer;
     transition: 300ms;
 }
-.bx-messenger-panel-avatar.bx-im-notifications-image-system.bx-im-notifications-header-image:hover {
+.bx-im-content-notification__container .bx-im-content-notification__panel-title_icon:hover {
     transform: scale(1.3);
 }
