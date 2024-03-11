@@ -19,7 +19,8 @@ function writeCounter()
 $(document).on('click', '.bx-im-content-notification__panel-title_icon', () => {
     let ids = []
     let interval = 0
-    console.log('kill tasks')
+    let items_count = $('.bx-im-content-notification-item__content-container').length
+    //console.log('kill tasks')
     $('.bx-im-content-notification-item__content-container').each((index, item) => {
         let $item = $(item)
         let url = $item.find('.bx-im-content-notification-item-content__content-text a').eq(0).attr('href')
@@ -39,7 +40,12 @@ $(document).on('click', '.bx-im-content-notification__panel-title_icon', () => {
             interval += 200
         }
         ids.push(taskId)
-        writeCounter()
+
+        /* Последний элемент */
+        if (index === items_count - 1) {
+            setTimeout(() => {
+                writeCounter()
+            }, interval)
+        }
     })
-    writeCounter()
 })
